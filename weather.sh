@@ -10,4 +10,4 @@ curl \
   -H "Accept-Language: $LANGUAGE" \
   -H "User-Agent: $UA" \
   -o result.html \
-  wttr.in/$CITY\_$OPTIONS.png
+  convert source.jpg <( wttr.in/$CITY\_$OPTIONS.png ) -geometry +50+50 -composite target.jpg

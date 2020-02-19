@@ -2,7 +2,7 @@ name: send email
 
 on:
   schedule:
-    - cron: '24 9 * * *'
+    - cron: '30 9 * * *'
 
 jobs:
   bot:

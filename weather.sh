@@ -1,7 +1,6 @@
 #!/bin/sh
 
 set -eux
-chcp 65001
 CITY=Xian
 LANGUAGE="zh-CN"
 OPTIONS=tqp0

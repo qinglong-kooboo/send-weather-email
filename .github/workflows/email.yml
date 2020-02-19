@@ -1,8 +1,9 @@
 name: send email
 
 on:
+  push:
   schedule:
-    - cron: '53 9 * * *'
+    - cron: '0 10 * * *'
 
 jobs:
   bot:

@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -eux
+chcp 65001
 CITY=Xian
 LANGUAGE="zh-CN"
 OPTIONS=tqp0
@@ -10,5 +11,9 @@ SOUCEJPG="https://bing.ioliu.cn/v1/rand?w=1024&h=768"
 curl \
   -H "Accept-Language: $LANGUAGE" \
   -H "User-Agent: $UA" \
-  -o result.html \
-  convert $SOUCEJPG <( wttr.in/$CITY\_$OPTIONS.png ) -geometry +50+50 -composite target.jpg
+convert \
+  $SOUCEJPG <( wttr.in/$CITY\_$OPTIONS.png ) -geometry +50+50 -composite target.jpg
+wget \
+  -p target.jpg
+curl \
+  -o result.html 

@@ -10,6 +10,6 @@ OPTIONS=tqp0
 curl \
   -H "Accept-Language: $LANGUAGE" \
   -H "User-Agent: $UA" \
-  -o result.html https://bing.ioliu.cn/v1/rand?w=1024&h=768
+  -o result.html https://bing.ioliu.cn/v1/rand
   #wttr.in/$CITY\_$OPTIONS.png
   #wttr.in/$CITY?format=1\&$UNIT

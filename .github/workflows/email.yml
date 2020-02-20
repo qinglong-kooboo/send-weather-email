@@ -8,6 +8,11 @@ on:
 jobs:
   bot:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        body:
+          - file://result.html
+          - xuexia i love u.
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
@@ -23,9 +28,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: ${{env.REPORT_DATE}} is another day we are together.
-          body:
-            -xuexia i love u.
-            -file://result.html
+          body: ${{matrix.body}}
           to: wu_thor@foxmail.com
           from: GitHub Actions
           content_type: text/html

@@ -23,8 +23,9 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: ${{env.REPORT_DATE}} is another day we are together.
-          body: xuexia i love u.
-                file://result.html
+          body:
+            -xuexia i love u.
+            -file://result.html
           to: wu_thor@foxmail.com
           from: GitHub Actions
           content_type: text/html

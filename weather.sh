@@ -10,6 +10,6 @@ OPTIONS=tqp0
 curl \
   -H "Accept-Language: $LANGUAGE" \
   -H "User-Agent: $UA" \
-  -o result.html ./background.html
+  -o result.html wttr.in/$CITY?format=1\&$UNIT
   #wttr.in/$CITY\_$OPTIONS.png
   #wttr.in/$CITY?format=1\&$UNIT

@@ -31,4 +31,4 @@ jobs:
           body: file://result.png
           to: wu_thor@foxmail.com
           from: GitHub Actions
-          content_type: text/html
+          content_type: application/x-png

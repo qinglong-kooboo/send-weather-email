@@ -11,5 +11,6 @@ curl \
   -H "Accept-Language: $LANGUAGE" \
   -H "User-Agent: $UA" \
   -o result.html \
-  wttr.in/$CITY\_$OPTIONS.png
+  https://bing.ioliu.cn/v1/rand?w=1024&h=768
+  #wttr.in/$CITY\_$OPTIONS.png
   #wttr.in/$CITY?format=1\&$UNIT

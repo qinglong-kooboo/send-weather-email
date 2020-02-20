@@ -14,7 +14,7 @@ jobs:
       - name: 'Get Weather'
         run: bash ./weather.sh
       - name: 'Get Date'
-        run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Xian' date '+%Y-%m-%d')"
+        run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Xian' date '+%m-%d-%Y')"
       - name: 'Send mail'
         uses: dawidd6/action-send-mail@master
         with:
@@ -22,7 +22,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          subject: ${{env.REPORT_DATE}} is another day we are together. hh !!str🧡 xx. '🧡'
+          subject: ${{env.REPORT_DATE}} is another day we are together.
           body: file://result.html
           to: wu_thor@foxmail.com
           from: GitHub Actions

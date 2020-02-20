@@ -28,7 +28,7 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: ${{env.REPORT_DATE}} Another day we are together.
-          body: file://result.png
+          body: file://result.html
           to: wu_thor@foxmail.com
           from: GitHub Actions
           content_type: application/x-png

@@ -1,0 +1,18 @@
+name: send email
+
+on:
+  push:
+  schedule:
+    - cron: '0 10 * * *'
+
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: 'SendGrid'
+        uses: peter-evans/sendgrid-action@v1
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SCRIPT_FILEPATH: ./send-email.js

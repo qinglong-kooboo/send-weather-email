@@ -8,11 +8,6 @@ on:
 jobs:
   bot:
     runs-on: ubuntu-latest
-    #strategy:
-      #matrix:
-        #body:
-          #- file://background.html
-          #- Xuexia i love u.
     steps:
       - name: 'Checkout codes'
         uses: actions/checkout@v1

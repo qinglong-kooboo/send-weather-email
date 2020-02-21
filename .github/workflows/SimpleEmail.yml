@@ -26,4 +26,4 @@ jobs:
           body: file://result.html
           to: wu_thor@foxmail.com
           from: GitHub Actions
-          content_type: application/x-png
+          content_type: text/html

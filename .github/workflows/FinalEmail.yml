@@ -12,7 +12,7 @@ jobs:
       - name: 'Checkout codes'
         uses: actions/checkout@v1
       - name: 'make script executable'
-        run: bash ./executable.sh
+        run: bash ./execute.sh
       - name: 'SendGrid'
         uses: peter-evans/sendgrid-action@v1
         env:

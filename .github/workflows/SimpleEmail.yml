@@ -1,7 +1,6 @@
 name: send email
 
 on:
-  push:
   schedule:
     - cron: '0 1 * * *'
 

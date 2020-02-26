@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 
 const sgMail = require('@sendgrid/mail');
+console.log(process.env.SENDGRID_API_KEY)
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const msg = {
@@ -10,6 +11,7 @@ const msg = {
     text: 'Hello plain world!',
     html: '<p>Hello HTML world!</p>',
 };
+console.log(msg.to)
 
 sgMail
     .send(msg)

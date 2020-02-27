@@ -6,7 +6,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 const msg = {
     to: 'wu_thor@foxmail.com',
-    from: 'qinglong@kooboo.cn',
+    from: 'qlyardi@outlook.com',
     subject: 'Hello world',
     text: 'Hello plain world!',
     html: '<p>Hello HTML world!</p>',

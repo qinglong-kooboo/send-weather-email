@@ -17,5 +17,6 @@ jobs:
         uses: peter-evans/sendgrid-action@v1
         env:
           SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDER_MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
           SCRIPT_FILEPATH: ./sendgrid.js
           #SCRIPT_FILEPATH: ./script/send-email.js
